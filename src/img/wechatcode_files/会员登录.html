@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0177)https://passport.banggo.com/CASServer/login?service=http%3A%2F%2Fbgact.banggo.com%2Flogin%3Fr_url%3Dhttp%253A%252F%252Fwww.banggo.com%252Ftheme%252FPC0824-00.shtml%253Favn%253D1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+<!--<base href="https://passport.banggo.com:443/CASServer/">--><base href=".">
+
+
+
+
+<script src="./会员登录_files/jquery-1.4.2.min.js.下载" type="text/javascript"></script>
+<script src="./会员登录_files/jquery.cookie.js.下载" type="text/javascript"></script>
+<link href="./会员登录_files/style.css" type="text/css" media="all" rel="stylesheet">
+<!--
+<script src="http://s.mb-go.com/pub7/style/js/jquery-1.4.2.min.js?vsion=20120619" type="text/javascript"></script>
+<script type="text/javascript">
+window.user_id = '';
+statistics();
+</script>
+-->
+
+<link rel="shortcut icon" href="https://passport.banggo.com/CASServer/images/favicon.ico" type="image/x-icon">
+
+<script type="text/javascript">
+	var ___username_flag = false;//普通登陆是否保存过用户名
+	var ___init_click = true;
+	var idx = 0;
+	function clearInputCSS(){
+		usernameInfoCSS();
+		passwordInfoCSS();
+	}
+		
+	function usernameInfoCSS(){
+		$("#username").removeClass("input2");
+		$("#username").addClass("input1");
+	}
+		
+	function usernameErrorCSS(){
+		$("#username").removeClass("input1");
+		$("#username").addClass("input2");
+	}
+		
+	function passwordErrorCSS(){
+		$("#password").removeClass("input1");
+		$("#password").addClass("input2");
+	}
+		
+	function passwordInfoCSS(){
+		$("#password").removeClass("input2");
+		$("#password").addClass("input1");
+	}
+		
+	function vcodeErrorCSS(){
+		$("#vcode").removeClass("input1");
+		$("#vcode").addClass("input2");
+	}
+		
+	function showDefaultInfo(i) {
+		clearInputCSS();
+		$("#id_info_username").html("");
+		$("#id_error_username").html("");
+		$("#id_info_password").html("");
+		$("#id_error_password").html("");
+	}
+		
+	$(document).ready(function(){
+		idx = $.cookie("loginType") || 0;
+		$("#username").focus(function() {
+			clearInputCSS();
+			$("#id_info_username").show();
+			$("#id_error_username").html("");
+			if( idx == 0 ) {
+				$("#id_info_username").html("请输入账户或邮箱地址");
+			} else if( idx == 1 ) {
+				$("#id_info_username").html("请输入手机号");
+			} else if( idx == 2) {
+				$("#id_info_username").html("请输入卡号");
+			}
+		}).blur(function () {
+			$("#id_info_username").html("");
+		});
+			
+		$("#password").focus(function () {
+			clearInputCSS();
+			$("#id_info_password").show();
+			$("#id_error_password").html("");
+			$("#id_info_password").html("请输入密码");
+		}).blur(function () {
+			$("#id_info_password").html("");
+		});
+			
+			
+		$("#vcode").focus(function () {
+			clearInputCSS();
+			$("#id_info_vcode").show();
+			$("#id_error_vcode").html("");
+			$("#id_info_vcode").html("请输入验证码");
+		}).blur(function () {
+			$("#id_info_vcode").html("");
+		});
+			
+		$('#jsSeltab>h3').each(function(i){
+			$(this).click(function(){
+				idx = i;
+				if($(this).hasClass('cstyle')) return true;
+				//1.这个里面要清空样式,2.根据label显示提示框中间的信息
+				clearInputCSS();//清空用户名密码框样式
+				showDefaultInfo(i);
+				$('#jsSeltab>h3').removeClass('cstyle').eq(i).addClass('cstyle');
+				//$('#jsFormarea>div.formbox').addClass('Ldn').eq(i).removeClass('Ldn');
+				$('#login_type_name').text($(this).attr('ltn')+'：');
+				$('#login_type_pwd').text($(this).attr('ltw')+'：');
+				$('.errorinfo').empty();
+				$(".input1").val('');
+				var unval = $.cookie("userName");
+	  			if(unval != null) {
+	  				var tval = $.cookie("loginType");
+	  				if(tval == i) {
+	  					$("#username").val(unval);
+	  				}
+	  			}
+				$('#loginType').val(i);
+			 	$("#status").remove();
+			 	focusPointer();
+			});
+		});
+		
+		$("#log_btn").click(function(){
+			clearInputCSS();
+		 	showDefaultInfo($.cookie("loginType"));
+		    var rmbu = $("#rememberUsername").attr("checked")
+		  	if(rmbu) {
+		  		$.cookie("userName", $("#username").val(), {expires : 7 ,path:'/CASServer'});
+		  		$.cookie("loginType", $("#loginType").val(), {expires : 7 ,path:'/CASServer'});
+		  	}else {
+		  		$.cookie("userName", null,{path:'/CASServer'});
+		  		$.cookie("loginType", null,{path:'/CASServer'});
+		  	}
+		    $("#lastIp").val("121.33.51.224");
+		    var msg = "";
+			var username = $("#username").val();
+			var password = $("#password").val();
+			var vcode=$("#vcode").val();
+			if(showErrorMessage(username,"","1") === false || showErrorMessage(password,"请输入密码","2") === false||showErrorMessage(vcode,"请输入验证码","3") === false) {
+				return;
+			}
+			$("#fm1").submit();
+		}); 
+		  
+		var unval = $.cookie("userName");
+		if(unval != null) {
+			var tval = $.cookie("loginType");
+			//	showDefaultInfoInit(tval);
+			if(tval == 0) {
+				___username_flag = true;
+			}
+			if(tval != null) {
+				$('#jsSeltab>h3').each(function(i){
+					if (tval == i) {
+						$(this).click();
+				  		$("#loginType").val(i);
+					}
+				});
+			}
+			$("#username").val(unval);
+		}
+		// 回车事件
+		document.onkeydown = function(e){ 
+			var ev = document.all ? window.event : e;
+			if(ev.keyCode==13) {
+				$("#log_btn").click();
+			}
+		};
+		
+		// 清空验证码
+		$("#vcode").val("");
+	});
+		
+	function showErrorPassword(msg){
+		passwordErrorCSS();
+		$("#id_info_password").hide();
+		$("#id_error_password").show();
+		$("#id_error_password").html(msg);
+	}
+		
+	function showErrorUserName(msg){
+		usernameErrorCSS();
+		$("#id_info_username").hide();
+		$("#id_error_username").show();
+		$("#id_error_username").html(msg);
+	}
+		
+	function showErrorVcode(msg){
+		vcodeErrorCSS();
+		$("#id_info_vcode").hide();
+		$("#id_error_vcode").show();
+		$("#id_error_vcode").html(msg);
+	}
+
+	function showErrorMessage(val,msg,key) {
+		if(key==""){
+			key="1";
+		}
+		if(!msg) {
+			k = "1";
+			if($('#loginType').val()=="0"){
+				msg =  "请输入账户或邮箱地址";
+			} else if($('#loginType').val()=="1"){
+				msg =  "请输入手机号";
+			} else if($('#loginType').val()=="2"){
+				msg = "请输入卡号";
+			} else {
+				msg = "请输入正确的登录信息";
+			}
+		} 
+		if(!val || val == "" || $.trim(val) == "") {
+			if(key=="1") {
+				showErrorUserName(msg);
+			} else if(key=="2"){
+				showErrorPassword(msg);
+			}else{
+				showErrorVcode(msg);
+			}
+			return false;
+		} 
+		return true;
+	}
+	</script>
+<title>会员登录</title>
+</head>
+<body>
+	
+	<!--登录页面开始-->
+	<input type="hidden" name="BM" id="BM" value="1">
+	
+	
+	
+<!--公用头部开始-->
+<div id="banggoMoomoo" class="topWrap">
+<div class="Ctop Cwrap Lovh">
+	<h1 class="logo Ldb Lfll">
+		<a href="http://www.banggo.com/" class="Ldb Lti1000r">邦购</a>
+	</h1>
+</div>
+</div>
+<input type="hidden" id="serviceValue" vaule="false">
+<!--公用头部结束-->
+<script type="text/javascript">
+$(function(){
+	var hasMvp = document.getElementById("serviceValue");
+	if(hasMvp){
+		$("#banggoMoomoo").addClass("topWrap");
+	}
+});
+</script>
+	<div class="LI_main Cwrap">
+		<div class="Lfll">
+			<a href="http://www.banggo.com/" target="_blank">
+				<img src="./会员登录_files/login_banner.jpg">
+			</a>
+		</div>
+		<div class="rarea Lfll">
+			<div id="jsSeltab" class="seltab">
+				<h3 class="t1 cstyle" ltn="用户名" ltw="登录密码">帐户登录</h3>
+				<h3 class="t2 " ltn="手机号" ltw="登录密码">手机登录</h3>
+				<h3 class="t3 " ltn="卡 号" ltw="卡密码">卡登录</h3>
+			</div>
+			<div id="jsFormarea" class="formarea Lovh">
+				<div class="formbox Lovh">
+					<form id="fm1" name="fm1" class="fm-v clearfix" action="https://passport.banggo.com/CASServer/login;jsessionid=9A688C8AAFE8D4D3FC634A031A486B5B?service=http%3A%2F%2Fbgact.banggo.com%2Flogin%3Fr_url%3Dhttp%253A%252F%252Fwww.banggo.com%252Ftheme%252FPC0824-00.shtml%253Favn%253D1" method="post">
+						<span><font color="red" id="id_error_message"> </font></span>
+						<input type="hidden" name="returnurl" value="">
+						<div class="item Lovh Lmt30">
+
+							<div class="ltext Lfll" id="login_type_name">
+								
+									
+									
+									
+									    用户名：
+									
+								
+							</div>
+							<div class="Lfll Lovh">
+								<input id="username" name="username" class="input1 Lfll required" tabindex="1" type="text" value="" size="25" maxlength="70" autocomplete="false">
+							</div>
+							<!-- 新增提示信息 -->
+							<div class="Lfll verify_text">
+								<span class="tips" id="id_info_username"></span> <span class="errorinfo1 Lcfl red" id="id_error_username"></span>
+							</div>
+							<!-- 新增提示信息 end -->
+
+						</div>
+
+						<div class="item Lovh ">
+							<div class="ltext Lfll" id="login_type_pwd">
+								
+									
+									
+									
+									   登录密码：
+									
+								
+							</div>
+							<div class="Lfll">
+								<input id="password" name="password" class="input1 Lfll required" tabindex="2" type="password" value="" size="25" maxlength="40" autocomplete="off">
+							</div>
+
+							<!-- 新增密码提示信息 -->
+							<div class="Lfll verify_text">
+								<span class="tips" id="id_info_password"></span> <span class="errorinfo1 Lcfl" id="id_error_password"></span>
+							</div>
+							<!-- 新增密码提示信息 end -->
+
+						</div>
+
+						<div class="item Lovh ">
+							<div class="ltext Lfll" id="login_type_pwd">验证码：</div>
+							<div class="Lfll">
+								<input id="vcode" name="vcode" class="input1 Lfll required" tabindex="3" style="width:50px;" type="text" value="" size="6" maxlength="6" autocomplete="false">
+
+
+								<span id="mySpan"> <img align="middle" id="img1" class="change_img" src="./会员登录_files/loginCode.do"> <a onclick="changeImg(&#39;img1&#39;)">换一张</a>
+								</span>
+							</div>
+
+							<!-- 新增验证码提示信息 -->
+							<div class="Lfll verify_text">
+								<span class="tips" id="id_info_vcode"></span> <span class="errorinfo1 Lcfl" id="id_error_vcode"></span>
+							</div>
+							<!-- 新增验证码提示信息 end -->
+
+						</div>
+
+
+						<div class="item Lovh Lmt5">
+							<div class="ltext Lfll">&nbsp;</div>
+							<div class="Lfll">
+								<input id="rememberUsername" name="rememberUsername" class="checkbox1" type="checkbox" checked="checked" tabindex="4"> <label for="rememberUsername" class="Lmr20">
+									记住用户名 </label> <input type="checkbox" name="rememberMe" id="rememberMe" value="true" class="checkbox1" tabindex="5"> <label for="autoLogin" class="Lmr20"> 自动登录 </label>
+							</div>
+						</div>
+						<div class="item Lovh Lmt10">
+							<div class="ltext Lfll">
+								&nbsp; <input type="hidden" name="lt" value="e1s1"> <input type="hidden" name="_eventId" value="submit">
+								<input id="loginType" name="loginType" type="hidden" value="0">
+								<input id="lastIp" name="lastIp" type="hidden" value="">
+							</div>
+							<div class="Lfll Lmr10">
+								<a class="btn btn_login" id="log_btn"><span>登录</span> </a>
+							</div>
+							<a class="retrieve Lfll" href="https://passport.banggo.com/CASServer/custom/showgetPwd.do?service=http://bgact.banggo.com/login?r_url=http%3A%2F%2Fwww.banggo.com%2Ftheme%2FPC0824-00.shtml%3Favn%3D1">找回密码？
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="bottom">
+					<span class="Lmr5">还不是邦购网用户？马上加入吧~~~</span> <a class="btn btn_common Lffst Lovv" href="https://passport.banggo.com/CASServer/custom/registryPage.do?service=http://bgact.banggo.com/login?r_url=http%3A%2F%2Fwww.banggo.com%2Ftheme%2FPC0824-00.shtml%3Favn%3D1"><span>免费注册&gt;&gt;</span>
+					</a>
+				</div>
+				<div class="login_surport">
+					<h4>或者使用合作网站登录：</h4>
+					<p>
+						<a href="http://bgact.banggo.com/Unionlogin/Authorize?from=qq" class="icon_qq" title="QQ">QQ</a>
+						<a href="http://bgact.banggo.com/Unionlogin/Authorize?from=alipay" class="icon_alipay" title="支付宝">支付宝</a>
+						<a href="http://act.banggo.com/UnionLogin?platform=sina" class="icon_weibo" title="新浪微博">新浪微博</a>
+						<!--
+						<a href="http://act.banggo.com/UnionLogin?platform=qqopen" class="icon_qq" title="QQ">QQ</a>
+						<a href="http://act.banggo.com/User/alipayLogin" class="icon_alipay" title="支付宝">支付宝</a>
+						-->
+						<a href="http://m.banggo.com/Api/wxLogin" class="icon_weixin" title="微信">微信</a>
+						<a href="http://act.banggo.com/UnionLogin?platform=renren" class="icon_renren" title="人人网">人人网</a>
+						<a style="cursor:default;"></a>
+					</p>
+				</div>
+				<style type="text/css">
+				.login_surport { border: 1px solid #efefef; padding: 0; margin-bottom: 10px; width: 300px}
+				.login_surport h4 { background: #efefef; margin: 0; line-height: 32px; padding: 0 8px; font-weight: normal;}
+				.login_surport p { margin: 0; overflow: hidden; zoom: 1;}
+				.login_surport a { background: #FFF url(https://passport.banggo.com/CASServer/themes/banggo/images/icon_login.png) -9999px -9999px no-repeat; cursor: pointer; padding: 0; border: 1px solid #efefef; margin: -1px; display: block; float: left; width: 100px; height: 30px; line-height: 30px; text-indent: 38px;}
+				.login_surport a:hover { color: #c30; text-decoration: none;}
+				.login_surport a.icon_qq { background-position: 7px -6px; }
+				.login_surport a.icon_alipay { background-position: 7px -56px; }
+				.login_surport a.icon_weibo { background-position: 7px -195px; }
+				.login_surport a.icon_renren { background-position: 7px -145px; }
+				.login_surport a.icon_weixin { background-position: 7px -101px; }
+				</style>
+			</div>
+		</div>
+	</div>
+	
+
+
+<div class="LI_bottom">
+	美特斯邦威集团网站：
+	<a href="http://www.metersbonwe.com/">美特斯邦威</a> |
+	<a href="http://www.me-city.com/">ME&amp;CITY</a> |
+	<a href="http://www.chincn.com/">CH'IN祺</a> |
+	<!-- <a href="http://www.myfstv.com/">时尚秘书</a> | -->
+	<a href="http://www.banggo.com/">邦购网</a>
+</div>
+	<script language="javascript">
+		$(function(){
+			var hasBanggo= $("#BM").val();
+			if(hasBanggo==1){
+				$("#banggoLogin").show();
+			}else{
+				$("#banggoLogin").hide();
+			}
+		});
+		
+		 //鼠标定位
+		  function focusPointer()
+		  {
+			  if(jQuery('#username').val()=='')
+			  {
+				  jQuery('#username')[0].focus();
+			  }
+			  else
+			  {
+				  jQuery('#password')[0].focus();
+			  }			  
+		  }
+		  jQuery(document).ready
+		  (
+			  function()
+			  {
+				  focusPointer();
+			  }
+		  );
+		  //更换验证码						
+		  function changeImg(imgId) {
+		        var imgSrc = $("#"+imgId);
+		        var src = "https://passport.banggo.com:443/CASServer//custom/loginCode.do";
+		       imgSrc.attr("src", chgUrl(src));
+
+		   }
+		   // 时间戳为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳
+		   function chgUrl(url) {
+		         var timestamp = (new Date()).valueOf();
+		         var newUrl = url+"?time="+timestamp;
+		         return newUrl;
+		      }
+		</script>
+
+
+</body></html>

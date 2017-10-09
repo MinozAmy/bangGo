@@ -1,0 +1,178 @@
+@charset "UTF-8";
+.common h3 { margin: 10px 0; }
+
+.common ul { width: 100%; }
+
+.common ul li { float: left; width: 50%; height: 300px; margin-bottom: 20px; }
+
+.common ul li div { float: left; }
+
+.common ul li div p.timeleft { height: 22px; line-height: 22px; font-size: 18px; }
+
+.common ul li div p.timeStart { height: 22px; line-height: 22px; font-size: 14px; color: #ccc; }
+
+.guan h4 { height: 64px; font-size: 18px; padding-left: 5px; line-height: 78px; }
+
+.guan h4:hover { opacity: 0.7; }
+
+.guan .guan_left { float: left; width: 240px; }
+
+.guan .guan_left ul { width: 216px; padding: 14px 0  0 20px; background-color: #FAFAFA; margin-left: 2px; margin-top: 5px; }
+
+.guan .guan_left ul li { float: left; width: 108px; }
+
+.guan .guan_left ul li a { font-size: 14px; height: 30px; display: block; color: #000; }
+
+.guan .guan_left ul li a:hover { color: #666; }
+
+.guan .guan_left ol li { float: left; }
+
+.guan .guan_left ol li a { width: 120px; height: 60px; display: block; }
+
+.guan .guan_right li { float: left; }
+
+/* ---------header---------- */
+header { width: 100%; border-bottom: 1px solid #dcdcdc; line-height: 32px; color: #999; }
+
+header .container { height: 32px; }
+
+header li { float: left; position: relative; }
+
+header a { color: #999; display: block; padding: 0 15px; }
+
+header a:hover { color: #777; }
+
+header .load, header .wdbg, header .app { background: url(../img/1.fw.png) no-repeat right top; height: 28px; z-index: 10; position: relative; }
+
+header .wdbg { padding-right: 20px; }
+
+header .weibo, header .weixin { padding: 0 5px; }
+
+header .hover { border: 1px solid #B5B5B5; border-bottom: 1px solid #fff; margin: -1px -1px  0; }
+
+header .loads, header .wdbgs, header .apps { display: none; position: absolute; padding: 5px 0; border: 1px solid #B5B5B5; background-color: #fff; top: 28px; left: -1px; box-shadow: 0 0 5px #ccc; z-index: 5; }
+
+header .loads a, header .wdbgs a, header .apps a { height: 25px; }
+
+header .loads a { width: 75px; }
+
+header .wdbgs a { width: 53px; }
+
+header .apps { padding: 10px; }
+
+header .wechat { display: none; background: url(../img/1.fw.png) no-repeat left top; width: 150px; height: 150px; position: absolute; left: -100px; }
+
+/* -----------content_top------------ */
+.content_top { width: 100%; padding-top: 10px; }
+
+.content_top .container { height: 55px; /* ----------logo-------- */ /* ----------search----------- */ /* -------购物车------ */ }
+
+.content_top .container .logo { float: left; }
+
+.content_top .container .logo a { display: block; width: 260px; height: 55px; overflow: hidden; }
+
+.content_top .container .logo a img { margin-top: -10px; margin-left: -23px; display: block; opacity: 1; }
+
+.content_top .container .search_l { margin-top: 20px; }
+
+.content_top .container .search_l input { display: block; border: 1px solid #d51819; width: 300px; height: 32px; float: left; padding-left: 4px; color: #777; font-size: 12px; }
+
+.content_top .container .search_l button { display: block; width: 80px; padding-left: 30px; height: 34px; border: 0 none; background-color: #d51819; float: left; color: #FFFFFF; font-size: 14px; }
+
+.content_top .container .search_r { margin-top: 10px; height: 55px; line-height: 55px; padding-left: 10px; }
+
+.content_top .container .search_r a { color: #666; padding: 0 10px; }
+
+.content_top .container .search_r a.active { color: #d51819; }
+
+.content_top .container .search_r span { color: #DCDCDC; }
+
+.content_top .container .gouwuche { background: url(../img/1.fw.png) no-repeat -200px top; margin-top: 20px; padding: 0px 35px 0 40px; line-height: 30px; height: 30px; }
+
+.content_top .container .gouwuche a { font-size: 14px; color: #666; }
+
+.content_top .container .gouwuche b { padding: 0 3px; color: #d51819; }
+
+/* ------------nav--------------- */
+.content_nav { width: 100%; margin-top: 20px; border-bottom: 1px solid #d51819; }
+
+.content_nav .device h3 { float: left; padding-left: 48px; height: 43px; line-height: 43px; width: 187px; background-color: #d51819; font-size: 16px; color: #fff; font-weight: normal; }
+
+.content_nav .nav li { float: left; padding: 0 15px; }
+
+.content_nav #mobilegai { float: right; }
+
+/* ----------热销----------- */
+.content_container { position: relative; }
+
+.content_center .rexiao { float: left; width: 223px; padding: 12px 0 0 10px; border: 1px solid #d51819; border-top: 0; }
+
+.content_center .rexiao li { padding-bottom: 13px; }
+
+.content_center .rexiao li h4 { font-size: 14px; position: relative; }
+
+.content_center .rexiao li h4 span:nth-child(1) { position: absolute; display: none; right: -3px; top: 2px; width: 9px; height: 24px; background: url(../img/2.fw.png) left -208px; z-index: 101; }
+
+.content_center .rexiao li h4 span:nth-child(2) { float: right; margin-right: 8px; color: #d51819; }
+
+.content_center .rexiao li a { color: #666; margin-right: 6px; display: inline-block; height: 21px; font-size: 13px; }
+
+.content_center .rexiao li a.active { color: #d51819; }
+
+/* -------------三级导航--------- */
+.content_center .thirdNav { z-index: 100; display: none; position: absolute; left: 234px; top: 0; margin-right: -1px; width: 726px; border-right: 1px solid #999999; }
+
+.content_center .thirdNav .thirdNav_dl { width: 185px; height: 533px; border: 1px solid #999999; border-top: 0; float: left; background-color: #fff; }
+
+.content_center .thirdNav .thirdNav_dl dt a { display: inline-block; font: bold 14px "Microsoft YaHei" !important; line-height: 16px; overflow: hidden; color: #222; padding: 10px 10px; width: 80%; }
+
+.content_center .thirdNav .thirdNav_dl dd a { display: inline-block; float: left; padding: 3px 10px; color: #999; line-height: 19px; }
+
+.content_center .thirdNav .thirdNav_top { width: 537px; height: 360px; float: left; background-color: #fff; }
+
+.content_center .thirdNav .thirdNav_bottom { width: 539px; height: 173px; border-bottom: 1px solid #999999; float: left; background-color: #fff; }
+
+.content_center .thirdNav .thirdNav_bottom h4 { font-size: 14px; height: 60px; line-height: 60px; background-color: #fff; padding-left: 13px; }
+
+.content_center .thirdNav .thirdNav_bottom ul { width: 515px; height: 112px; background-color: #fff; padding-left: 10px; }
+
+.content_center .thirdNav .thirdNav_bottom ul li { float: left; height: 42px; width: 120px; background-color: #fff; }
+
+/* ------------footer-------- */
+footer { margin-top: 55px; }
+
+footer .footerimg .footerimgli { float: left; border: 1px solid #DCDCDC; border-right: 0; }
+
+footer .footerimg .footerimgli:last-child { border-right: 1px solid #DCDCDC; }
+
+footer .footerimg .footerimgli ol li { width: 78px; border-right: 1px solid #DCDCDC; padding-left: 40px; float: left; height: 60px; margin: 14px 0 15px; }
+
+footer .footerimg .footerimgli ol li:last-child { border-right: 0; }
+
+footer .footerimg .footerimgli ol li p { color: #C9C9C9; font-weight: bold; padding-top: 12px; }
+
+footer .footdl .footdltop { margin-top: 40px; height: 40px; width: 100%; background-color: #F7F7F7; border-top: 1px solid #DCDCDC; }
+
+footer .footdl .container { border-bottom: 2px solid #DCDCDC; }
+
+footer .footdl .container dl { width: 200px; float: left; display: block; height: 210px; }
+
+footer .footdl .container dt { height: 40px; line-height: 40px; color: #4A413F; font-size: 14px; font-weight: bold; margin-bottom: 12px; }
+
+footer .footdl .container dd { color: #231815; height: 28px; line-height: 28px; }
+
+footer .footdl .container dd a { color: #231815; }
+
+footer .footdl .container #sjrz { line-height: 4px; }
+
+footer .footerBottom { text-align: center; }
+
+footer .footerBottom p { margin: 24px 0 16px; font-size: 14px; color: #878787; font-weight: bold; }
+
+footer .footerBottom img { display: inline-block; margin: 0 0 16px 5px; }
+
+/* ------------固定在窗口右下角--------- */
+#onlineServer { position: fixed; right: 20px; bottom: 35px; background: url(../img/2.fw.png) no-repeat -69px -1073px; width: 33px; height: 43px; }
+
+/* -------------返回顶部------------- */
+#toTop { position: fixed; right: 20px; bottom: 100px; background: url(../img/2.fw.png) no-repeat -10px -1065px; width: 33px; height: 80px; }

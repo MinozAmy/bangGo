@@ -1,0 +1,47 @@
+/*清除默认样式、添加公共样式*/
+body,button,h1,h2,h3,h4,p,ul,li,ol,dl,dt,dd,a,input,img{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+.bigbox{
+    min-width: 1200px;
+}
+.container{
+    width: 1200px;
+    margin:0 auto;
+}
+img{
+	display: block;
+	border: 0 none;
+}
+dd,dl,dt{display: block;}
+body{
+    font-family:"微软雅黑","宋体",verdana,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+input{
+    outline:none;}
+header,footer,section,nav,article,aside,main{
+    display:block;}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after{
+    content:"";
+    display: block;
+    height: 0;
+    clear:both;
+    overflow:hidden;
+    visibility: hidden;
+    zoom:1;
+}

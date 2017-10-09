@@ -1,0 +1,35 @@
+{
+  "name": "bangGo",
+  "version": "1.0.0",
+  "description": "jQuery应用",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinozAmy/1705.git"
+  },
+  "keywords": [
+    "1705",
+    "gulp"
+  ],
+  "author": "Amy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinozAmy/1705/issues"
+  },
+  "homepage": "https://github.com/MinozAmy/1705#readme"
+}

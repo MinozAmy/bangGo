@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.bigbox { min-width: 980px; }
+
+.container { width: 980px; margin: 0 auto; }
+
+header .container h3 a { display: block; width: 220px; height: 100px; background: url(../img/logo.png) no-repeat; background-position: 50% 50%; }
+
+footer .container { text-align: center; padding-top: 20px; height: 19px; }
+
+footer .container a { cursor: pointer; color: #333; }
+
+footer .container a:hover { text-decoration: underline; }
+
+/* --------------手机注册----------- */
+section .container1 { height: 27px; border-bottom: 2px solid #6E6E6E; }
+
+section .container1 h3 { height: 27px; width: 160px; float: left; margin-bottom: 10px; background: url(../img/register2.png) no-repeat right top; }
+
+section .container2 { border: 1px solid #ccc; height: 326px; margin-top: 10px; background: url(../img/register1.png) no-repeat; background-position: 100% 0; }
+
+section .container2 form { padding: 20px 0 30px 15px; width: 743px; height: 276px; font-family: "宋体"; font-size: 14px; color: #333333; }
+
+section .container2 form fieldset { border: 0; }
+
+section .container2 form fieldset legend { padding-left: 20px; border-bottom: 1px dashed #ccc; height: 30px; line-height: 30px; width: 100%; }
+
+section .container2 form fieldset p { height: 40px; padding-top: 20px; }
+
+section .container2 form fieldset p label { display: inline-block; width: 100px; line-height: 30px; text-align: right; float: left; margin-right: 10px; }
+
+section .container2 form fieldset p input { width: 250px; height: 24px; display: inline-block; padding-left: 2px; float: left; margin-right: 10px; }
+
+section .container2 form fieldset p .shadow { box-shadow: 0 2px 1px 0 #E3E3E3 inset; }
+
+section .container2 form fieldset p .tips { width: 305px; height: 38px; display: inline-block; font-size: 12px; line-height: 18px; color: #999; float: left; }
+
+section .container2 form fieldset p img { display: inline-block; }
+
+section .container2 form fieldset p a { color: #333; }
+
+section .container2 form fieldset p #submit1 { margin-left: 135px; background-color: #FFF; display: block; width: 152px; height: 35px; border: 0; background: url(../img/register3.png) no-repeat left top; }
+
+section .container2 form fieldset p #submit1:hover { opacity: 0.8; }

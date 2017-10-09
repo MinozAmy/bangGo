@@ -1,0 +1,106 @@
+@charset "UTF-8";
+.content_center .container { position: relative; }
+
+.content_center .container .rexiao { width: 224px; position: absolute; background-color: #fff; z-index: 100; }
+
+.content_center .container .rexiao .rexiaoli { background-color: #fff; }
+
+.details .breadNav { height: 26px; padding-top: 15px; margin-top: 30px; }
+
+.details .breadNav a { color: #000; }
+
+.details .details_left { width: 480px; height: 620px; margin-right: 50px; float: left; }
+
+.details .details_left .bigPic { width: 480px; height: 480px; float: left; position: relative; }
+
+.details .details_left .bigPic div { position: absolute; width: 480px; height: 480px; }
+
+.details .details_left .bigPic .fangdajing { position: absolute; top: 0; left: 0; z-index: 2; width: 249px; height: 249px; background-color: #fff; opacity: .5; filter: alpha(opacity=50); border: 1px solid #f1f1f1; cursor: crosshair; }
+
+.details .details_left .smallPic { width: 480px; height: 80px; margin-top: 15px; float: left; overflow: hidden; }
+
+.details .details_left .smallPic ul { width: 500px; }
+
+.details .details_left .smallPic ul li { border: 1px solid #ccc; width: 78px; height: 78px; margin-right: 20px; float: left; }
+
+.details .details_left .smallPic ul li.active { border-color: red; }
+
+.details .details_left .smallPic ul li:hover { border-color: red; }
+
+.details .details_left .share { float: left; margin-top: 25px; width: 480px; height: 20px; }
+
+.details .details_left .share .bianhao { width: 120px; height: 19px; font-size: 14px; color: #999; margin-right: 35px; float: left; }
+
+.details .details_left .share .fenxiang { float: left; width: 100px; position: relative; font-weight: 700; }
+
+.details .details_left .share .fenxiang .share1 { height: 35px; padding: 0 30px; }
+
+.details .details_left .share .fenxiang .share2 { position: absolute; left: 5px; top: 30px; display: none; border: 1px solid #ccc; z-index: 100; }
+
+.details .details_left .share .fenxiang .share2 p { width: 195px; padding-left: 5px; color: #242424; background-color: #f6f6f6; line-height: 30px; font-weight: 700; }
+
+.details .details_left .share .fenxiang .share2 ol { width: 200px; }
+
+.details .details_left .share .fenxiang .share2 li { float: left; width: 100px; line-height: 18px; background-color: #fff; }
+
+.details .details_left .share .fenxiang .share2 li a { font-style: normal; color: #ccc; line-height: 36px; height: 36px; padding-left: 30px; }
+
+.details .details_left .share .dianzan { float: left; }
+
+.details .details_left .share .dianzan a { display: block; width: 28px; height: 20px; padding-left: 30px; margin-left: 35px; font-weight: 700; color: #f8584f; }
+
+.details .details_right { width: 670px; height: 549px; float: left; }
+
+.details .details_right h4 { width: 670px; height: 24px; color: #222; font: 700 16px "微软雅黑","黑体","宋体",verdana; }
+
+.details .details_right h4 a { color: #222; }
+
+.details .details_right h4 a:hover { text-decoration: underline; }
+
+.details .details_right .baseinfo { width: 670px; height: auto; box-sizing: border-box; margin-top: 18px; background: #f6f6f6; }
+
+.details .details_right .baseinfo ul { padding-bottom: 15px; padding-top: 18px; }
+
+.details .details_right .baseinfo ul li { width: 670px; overflow: hidden; padding-top: 15px; box-sizing: border-box; }
+
+.details .details_right .baseinfo ul li.price { padding: 0 15px; }
+
+.details .details_right .baseinfo ul li.price b, .details .details_right .baseinfo ul li.price i, .details .details_right .baseinfo ul li.price em, .details .details_right .baseinfo ul li.price span { font: 400 12px "微软雅黑","黑体","宋体",verdana; color: #222; }
+
+.details .details_right .baseinfo ul li.price strong { font: 700 22px "微软雅黑","黑体","宋体",verdana; color: #f8584f; }
+
+.details .details_right .baseinfo ul li.price i { padding-left: 30px; margin-left: 0 !important; }
+
+.details .details_right .baseinfo ul li.price em { text-decoration: line-through; color: #696969; }
+
+.details .details_right .baseinfo ul li.price span { float: right; padding: 3px 10px; color: #fff; background-color: #f84646; margin-top: 5px; }
+
+.details .details_right .baseinfo ul li.zhekou { padding: 15px 15px 0; color: #696969; font: 400 12px "微软雅黑","黑体","宋体",verdana; }
+
+.details .details_right .baseinfo ul li.zhekou div.zhekou1 { float: left; }
+
+.details .details_right .baseinfo ul li.zhekou div.zhekou2 { float: right; text-decoration: underline; width: 100px; float: right; text-align: right; display: block; cursor: pointer; margin-top: 0; }
+
+.details .details_right .baseinfo ul li.zhekou div.zhekou2:hover .vipRule { display: block; }
+
+.details .details_right .baseinfo ul li.zhekou div.zhekou2 .vipRule { width: 400px; height: auto; display: none; text-align: left; cursor: auto; padding: 10px; line-height: 150%; background-color: #fff; position: absolute; margin-left: -320px; box-shadow: 0 0 15px #ccc; z-index: 111; }
+
+.details .details_right .saleinfo { width: 670px; height: 16px; padding: 5px 0; margin-top: 20px; }
+
+.details .details_right .saleinfo div { float: left; text-align: center; width: 140px; }
+
+.details .details_right .saleinfo div.first { width: 90px; text-align: left; }
+
+.details .details_right .saleinfo div i { float: left; border-left: 1px solid #EDEDED; }
+
+.details .details_right .saleinfo div span { color: #f8584f; display: inline-block; margin: 0 4px; }
+
+.details .details_right #color { width: 100%; overflow: hidden; margin-top: 20px; }
+
+.details .details_right #color dd { cursor: pointer; overflow: hidden; }
+
+.details .details_right #color dd a { border: 1px solid #DCDCDC; padding: 1px; float: left; display: block; margin-top: 10px; margin-right: 10px; }
+
+.details .details_right #color dd a img { width: 51px; height: 51px; }
+
+.details .details_right #color #size { overflow: hidden; margin-top: 20px; position: relative; width: 670px; background-color: #fc0; }

@@ -1,0 +1,92 @@
+@import 'var';
+$a_color:#666;
+
+
+
+
+/* -----------轮播图------------ */
+.content_center .carousel{
+    position: relative;
+    padding:6px;
+    width: 720px;
+    // height: 526px;
+    
+    ul{
+        overflow: hidden;
+        position: relative;
+        height: 480px;
+        width: 720px;
+    }
+    ol{ 
+        border:1px solid #999999;
+        li{
+            height: 44px;
+            line-height: 48px;
+            width: 143px;
+            text-align: center;
+            border-top:2px solid #fff;
+            float: left;
+            font-size:14px;
+            font-weight: bold;
+            color:#666666;
+            span{float: right;color:#DCDCDC;}
+        }
+        li.active{
+            color:#2F2F2F;
+            border-top:2px solid $mainColor;
+        }
+    }
+}
+/* ---------广告栏----------------- */
+.content_center aside{
+    float: left;
+    width: 233px;
+    img{padding-top: 6px;width: 233px;}
+}
+/* ----------滑动轮播图------------ */
+.content_center .smallbox{
+    position: relative;
+    overflow:hidden;
+    height: 120px;
+    ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 120px; 
+        width: 2400px;
+        li{
+            position: relative;
+            float: left;
+            margin-right: 7px;
+            width: 235px;
+            &:nth-child(5n){
+                margin-right:0;
+                width: 232px;
+            }
+            /* ---------遮罩----------- */
+            div{
+                height: 100%;
+                width: 100%;
+                background: rgba(255,255,255,.5);
+                position: absolute;
+                top: 0;left: 0;
+                display:none;
+            }
+            
+        }
+        
+    }
+    span{
+        position: absolute;
+        top: 40px;
+        left: 5px;
+    }
+    span.lunbogt{left: 1155px;}    
+}
+
+
+
+
+
+
+
