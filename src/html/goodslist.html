@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>列表页</title>
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/goodslist.css">
+		<script src="../lib/require.js" data-main="../js/goodslist"></script>
+	</head>
+
+	<body>
+		<div id="" class="bigbox">
+			<div class='header'></div>
+			<article class='content_top'></article>
+			<article class='content_nav'></article>
+			<article class='content_center'>
+				<div class="container content_container clearfix"></div>
+			</article>
+			<div class="breadnav">
+				<div class="bread">
+					<a href="../index.html" alt="邦购网首页">邦购网首页</a> &gt;
+					<a href="#" alt="所有分类">所有分类</a> &gt;
+					<a href="#" alt="男装">男装</a>
+				</div>
+				<div class="secondSearch">
+					<input type="text" name="word" value="" autocomplete="off">
+					<input id="secSeach" type="button" title="搜索">
+				</div>
+			</div>
+			<div class="container">
+				<!--左边部分-->
+				<div class="search_box">
+
+					<h3>分类</h3>
+					<ul>
+						<li>
+							<em class="updown"></em>
+							<a href="#">T恤</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">POLO</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">长袖T恤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">短袖T恤</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a href="#">衬衫</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">长袖衬衫</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">短袖衬衫</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a class="" href="#">裤装</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">牛仔长裤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">牛仔中短裤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt class="more"><em class="more"> </em><a href="#">西裤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">休闲长裤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">休闲中短裤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">针织长裤</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">针织中短裤</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a class="" href="#">毛衣</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">开衫毛衣</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">套头毛衣</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a class="" href="#">外套</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">风衣</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">夹克</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">马夹</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">棉服</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">大衣</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">皮衣</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">西服</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">羽绒服</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a class="" href="#">卫衣</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">开衫卫衣</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">套头卫衣</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a class="" href="#">套装</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">休闲套装</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">运动套装</a></dt>
+							</dl>
+						</li>
+						<li>
+							<em class="updown"></em>
+							<a class="" href="#">内衣</a>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">内衣上装</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">内衣下装</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt class="more"><em class="more"></em><a href="#">内衣套装</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">家居服</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">袜子</a></dt>
+							</dl>
+							<dl style="display: none;">
+								<dt><em class="more"></em><a href="#">泳衣</a></dt>
+							</dl>
+						</li>
+					</ul>
+				</div>
+				<div class="mbshop_search_rt_frame">
+					<!--右上部分-->
+					<div class="mbshop_searchOption" style="height: 50px;">
+						<div id="mainSearch">
+							<div class="mbshop_searchItem">
+								<span id="brand">品牌</span>
+								<div class="mbshop_searchItemContent">
+									<a href="#"><i>Metersbonwe</i>
+									<a href="#"><i>ME＆CITY</i>
+									<a href="#"><i>米郎骑士</i></a>
+									<a href="#"><i>Pioneer Camp拓路者</i></a>
+									<a href="#"> <i>铂绽</i></a>
+									<a href="#"> <i>符号公社</i></a>
+									<a href="#"> <i>潮至</i> </a>
+									<a href="#"> <i>普斯特</i> </a>
+									<a href="#"> <i>The 2nd Law</i> </a>
+									<a href="#"> <i>凡洛</i> </a>
+									<a href="#"> <i>妮芬儿</i> </a>
+									<a href="#"> <i>潮流前线</i> </a>
+									<a href="#"> <i>麦金浓</i> </a>
+									<a href="#"> <i>琳可缇娜</i> </a>
+									<a href="#"> <i>Canshow</i> </a>
+									<a href="#"> <i>DUNKELVOLK</i> </a>
+									<a href="#"> <i>ERICD</i> </a>
+									<a href="#"> <i>乐麦尚品</i> </a>
+									<a href="#"> <i>欧沙力文</i> </a>
+									<a href="#"> <i>雅圣利</i> </a>
+									<a href="#"> <i>古由卡</i> </a>
+									<a href="#"> <i>千纸鹤</i>
+										<a href="#"> <i>优臣品</i> </a>
+									</a>
+									<a href="#"> <i>力高</i> </a>
+									<a href="#"> <i>才子</i> </a>
+									<a href="#"> <i>盯目</i> </a>
+									<a href="#"> <i>莱斯玛特</i>
+										<a href="#"> <i>YBM</i> </a>
+									</a>
+									<a href="#"> <i>MR.SCAREORCW</i> </a>
+									<a href="#"> <i>狮谐迈</i> </a>
+									<a href="#"> <i>奢态</i> </a>
+									<a href="#"> <i>俏莉芙</i> </a>
+									<a href="#"> <i>OLRIK</i> </a>
+									<a href="#"> <i>小魔怪</i> </a>
+									<a href="#"> <i>千仞岗</i> </a>
+									<a href="#"> <i>百郡爵</i> </a>
+									<a href="#"> <i>南极人</i> </a>
+									<a href="#"> <i>梦娜世家</i> </a>
+									<a href="#"> <i>鸭鸭</i> </a>
+									<a href="#"> <i>妖精的口袋</i> </a>
+									<a href="#"> <i>作梦家</i> </a>
+									<a href="#"> <i>柏航</i> </a>
+									<a href="#"> <i>GENANX</i> </a>
+									<a href="#"> <i>艾淳度</i> </a>
+									<a href="#"> <i>全织时代</i> </a>
+									<a href="#"> <i>adidas</i> </a>
+									<a href="#"> <i>浪莎</i> </a>
+									<a href="#"> <i>俞兆林</i> </a>
+									<a href="#"> <i>富贵鸟</i> </a>
+									<a href="#"> <i>妮狄娅</i> </a>
+									<a href="#"> <i>红豆</i> </a>
+									<a href="#"> <i>浅休</i> </a>
+									<a href="#"> <i>赛琪</i> </a>
+									<a href="#"> <i>鸿星尔克</i> </a>
+									<a href="#"> <i>特步</i> </a>
+									<a href="#"> <i>靓梦白玉兰</i> </a>
+									<a href="#"> <i>赛宾保罗</i> </a>
+									<a href="#"> <i>MaxVis</i> </a>
+									<a href="#"> <i>septwolves</i> </a>
+									<a href="#"> <i>丝柏舍</i> </a>
+									<a href="#"> <i>岛村佳居</i> </a>
+									<a href="#"> <i>Levi's</i> </a>
+									<a href="#"> <i>361°</i> </a>
+									<a href="#"> <i>豆米花</i> </a>
+									<a href="#"> <i>海谜璃</i> </a>
+									<a href="#"> <i>Long Clothing</i> </a>
+									<a href="#"> <i>贵人鸟</i> </a>
+									<a href="#"> <i>JOESPIRIT</i> </a>
+									<a href="#"> <i>NIKE</i> </a>
+									<a href="#"> <i>袜子老赵</i> </a>
+									<a href="#"> <i>北极绒</i> </a>
+									<a href="#"> <i>Cheap Monday</i> </a>
+									<a href="#"> <i>DNX</i> </a>
+									<a href="#"> <i>乔丹</i> </a>
+									<a href="#"> <i>puma</i> </a>
+									<a href="#"> <i>雪中飞</i> </a>
+									<a href="#"> <i>Mishka</i> </a>
+									<a href="#"> <i>TYAKASHA</i> </a>
+									<a href="#"> <i>薏凡特</i> </a>
+									<a href="#"> <i></i> </a>
+									<!-- 单独筛选项的内容 -->
+								</div>
+								<div class="mbshop_searchMore" style="display: block;">更多</div>
+							</div>
+							<div class="mbshop_searchItem">
+								<span id="price">价格</span>
+								<div class="mbshop_searchItemContent">
+									<a href="#"> <i>0-69</i> </a>
+									<a href="#"> <i>70-139</i> </a>
+									<a href="#"> <i>140-199</i> </a>
+									<a href="#"> <i>200-299</i> </a>
+									<a href="#"> <i>300-5199</i> </a>
+									<!-- 单独筛选项的内容 -->
+									<!-- 价格区间 -->
+									<div class="new_mbshop_pricequjian">
+										<input type="text" id="start_price" value="">
+										<b> - </b>
+										<input type="text" id="end_price" value="">
+										<input type="hidden" id="maxPrice" value="3999.0">
+										<input type="hidden" id="minPrice" value="8.0">
+										<input type="button" class="mbshop_ie_btn_s_f_sure" name="btn_sure" value="确认">
+										<span id="notice-msg" style="width:auto;padding-left:10px;border:0;color:red"></span>
+									</div>
+								</div>
+
+							</div>
+							<div class="mbshop_searchItem">
+								<span id="size">尺寸</span>
+								<div class="mbshop_searchItemContent">
+									<a href="#"> <i>26</i> </a>
+									<a href="#"> <i>27</i> </a>
+									<a href="#"> <i>28</i> </a>
+									<a href="#"> <i>29</i> </a>
+									<a href="#"> <i>30</i> </a>
+									<a href="#"> <i>31</i> </a>
+									<a href="#"> <i>32</i> </a>
+									<a href="#"> <i>34</i> </a>
+									<a href="#"> <i>35</i> </a>
+									<a href="#"> <i>36</i> </a>
+									<a href="#"> <i>37</i> </a>
+									<a href="#"> <i>38</i> </a>
+									<a href="#"> <i>40</i> </a>
+									<a href="#"> <i>41</i> </a>
+									<a href="#"> <i>42</i> </a>
+									<a href="#"> <i>43</i> </a>
+									<a href="#"> <i>44</i> </a>
+									<a href="#"> <i>110</i> </a>
+									<a href="#"> <i>150</i> </a>
+									<a href="#"> <i>155</i> </a>
+									<a href="#"> <i>160</i> </a>
+									<a href="#"> <i>165</i> </a>
+									<a href="#"> <i>170</i> </a>
+									<a href="#"> <i>175</i> </a>
+									<a href="#"> <i>180</i> </a>
+									<a href="#"> <i>185</i> </a>
+									<a href="#"> <i>190</i> </a>
+									<a href="#"> <i>195</i> </a>
+									<a href="#"> <i>其它</i> </a>
+									<a href="#"> <i>XL</i> </a>
+									<a href="#"> <i>XXL</i> </a>
+									<a href="#"> <i>32(2尺5)</i> </a>
+									<a href="#"> <i>30(2尺3)</i> </a>
+									<a href="#"> <i>31(2尺4)</i> </a>
+									<a href="#"> <i>33(2尺6)</i> </a>
+									<a href="#"> <i>28(2尺1)</i> </a>
+									<a href="#"> <i>29(2尺2)</i> </a>
+									<a href="#"> <i>35(2尺8)</i> </a>
+									<a href="#"> <i>S</i> </a>
+									<a href="#"> <i>36(2尺9)</i> </a>
+									<a href="#"> <i>27(2尺0)</i> </a>
+									<a href="#"> <i>37(3尺0)</i> </a>
+									<a href="#"> <i>38(3尺1)</i> </a>
+									<a href="#"> <i>均码</i> </a>
+									<a href="#"> <i>26(1尺9)</i> </a>
+									<a href="#"> <i>40(3尺3)</i> </a>
+									<a href="#"> <i>39(3尺2)</i> </a>
+									<a href="#"> <i>41(3尺4)</i> </a>
+									<a href="#"> <i>23(1尺6)</i> </a>
+									<a href="#"> <i>42(3尺5)</i> </a>
+									<a href="#"> <i>25(1尺8)</i> </a>
+									<!-- 单独筛选项的内容 -->
+								</div>
+								<div class="mbshop_searchMore" style="display: block;">更多</div>
+							</div>
+							<div class="mbshop_searchItem">
+								<span id="97">性别</span>
+								<div class="mbshop_searchItemContent">
+									<a href="#"> <i>男</i> </a>
+									<a href="#"> <i>其它</i> </a>
+									<a href="#"> <i>女</i> </a>
+									<!-- 单独筛选项的内容 -->
+								</div>
+
+							</div>
+						</div>
+
+						<div class="seach_Box">
+							<b>高级筛选</b>
+							<!-- 遍历开始 -->
+							<!-- 尺寸只有3级分类以上显示，年龄在2级分类以上显示 -->
+							<div class="mbshop_searchItemshuxing">
+								<div class="mbshop_new_searchItemOption">
+									<a class="mbshop_new_searchItemOption_menu"><i> 季节</i><em></em></a>
+									<div class="mbshop_new_searchItemOption_box">
+										<a href="#">秋</a>
+										<a href="#">冬</a>
+										<a href="#">春</a>
+										<a href="#">常年款</a>
+										<a href="#">夏</a>
+										<a href="#">全部季节</a>
+									</div>
+								</div>
+							</div>
+							<!-- 遍历结束 -->
+							<!-- 遍历开始 -->
+
+							<div class="mbshop_searchItemshuxing">
+								<div class="mbshop_new_searchItemOption">
+									<a class="mbshop_new_searchItemOption_menu"><i> 场合</i><em></em></a>
+									<div class="mbshop_new_searchItemOption_box">
+										<a href="#">休闲</a>
+										<a href="#">都市</a>
+										<a href="#">潮流</a>
+										<a href="#">摇滚</a>
+										<a href="#">校园</a>
+										<a href="#">街头</a>
+										<a href="#">运动户外</a>
+										<a href="#">简约</a>
+										<a href="#">商务</a>
+										<a href="#">日韩</a>
+										<a href="#">派对</a>
+										<a href="#">OL通勤</a>
+										<a href="#">度假</a>
+										<a href="#">欧美</a>
+										<a href="#">聚会</a>
+										<a href="#">旅游</a>
+										<a href="#">情侣</a>
+										<a href="#">复古</a>
+										<a href="#">居家</a>
+										<a href="#">游戏</a>
+										<a href="#">亲子</a>
+										<a href="#">婚礼</a>
+										<a href="#">礼服</a>
+										<a href="#">民俗</a>
+										<a href="#">清新</a>
+										<a href="#">全部场合</a>
+									</div>
+								</div>
+							</div>
+							<!-- 遍历结束 -->
+							<!-- 遍历开始 -->
+							<!-- 尺寸只有3级分类以上显示，年龄在2级分类以上显示 -->
+							<div class="mbshop_searchItemshuxing">
+								<!-- <span id="86">系列</span> -->
+								<div class="mbshop_new_searchItemOption">
+									<a class="mbshop_new_searchItemOption_menu"><i> 系列	</i><em></em></a>
+									<div class="mbshop_new_searchItemOption_box">
+										<a href="#">休闲</a>
+										<a href="#">其它</a>
+										<a href="#">都市</a>
+										<a href="#">潮流</a>
+										<a href="#">MTEE</a>
+										<a href="#">基本</a>
+										<a href="#">商务</a>
+										<a href="#">全部系列	</a>
+									</div>
+								</div>
+							</div>
+							<!-- 遍历结束 -->
+							<!-- 遍历开始 -->
+							<!-- 尺寸只有3级分类以上显示，年龄在2级分类以上显示 -->
+							<div class="mbshop_searchItemshuxing">
+								<!-- <span id="color">颜色</span> -->
+								<div class="mbshop_new_searchItemOption">
+									<a class="mbshop_new_searchItemOption_menu"><i> 颜色	</i><em></em></a>
+									<div class="mbshop_new_searchItemOption_box mbshop_new_searchItem_right">
+										<a href="#"> <b class="newbgcolorblock_11"></b>蓝色系</a>
+										<a href="#"> <b class="newbgcolorblock_13"></b>黑色系</a>
+										<a href="#"> <b class="newbgcolorblock_3"></b>棕色系</a>
+										<a href="#"> <b class="newbgcolorblock_5"></b>灰色系</a>
+										<a href="#"> <b class="newbgcolorblock_6"></b>白色系</a>
+										<a href="#"> <b class="newbgcolorblock_10"></b>绿色系</a>
+										<a href="#"> <b class="newbgcolorblock_9"></b>红色系</a>
+										<a href="#"> <b class="newbgcolorblock_12"></b>黄色系</a>
+										<a href="#"> <b class="newbgcolorblock_1"></b>卡其系</a>
+										<a href="#"> <b class="newbgcolorblock_2"></b>杏色系</a>
+										<a href="#"> <b class="newbgcolorblock_4"></b>橙色系</a>
+										<a href="#"> <b class="newbgcolorblock_7"></b>紫色系</a>
+										<a href="#"> <b class="newbgcolorblock_8"></b>粉色系</a>
+										<a href="#">全部颜色	</a>
+									</div>
+								</div>
+							</div>
+							<!-- 遍历结束 -->
+						</div>
+					</div>
+
+					<!--------------------列表页内容-------------->
+
+					<!-- 找到商品提示 -->
+					<div class="mbshop_searchAlert">为您找到 <b>3651</b> 个商品</div>
+					<!--头部-->
+					<div class="mbshop_pdFilter">
+						<!--左边-->
+						<div class="mbshop_pdFilterItem">
+							<a class="mbshop_pdFilterHover" href="#" alt="默认">默 认</a>
+							<a class="mbshop_pdFilterUp1" href="#" alt="上架时间">上架时间</a>
+							<a class="mbshop_pdFilterUp2" href="#" alt="销量">销量</a>
+							<a href="#" alt="折扣">折扣</a>
+							<a href="#" alt="价格">价格</a>
+						</div>
+						<!--中间右边-->
+						<div class="mbshop_pdPaginationTop">
+
+							<!--中间-->
+							<div class="mbshop_pdPaginationAct">
+								<b>1/92</b>页 &nbsp;共<b>&nbsp;3651&nbsp;</b>个商品 &nbsp;
+								<a href="#">下一页</a>
+							</div>
+							<!--右边-->
+							<div class="mbshop_pdPaginationShowPd">
+								<label>
+                            		<input type="radio" id="style" name="searchType" value="1" checked="">
+                            		<span style="cursor:pointer">款式</span>
+                            	</label>
+								<label>
+				            		<input type="radio" id="color" name="searchType" value="2">
+				            		<span style="cursor:pointer">色系</span>
+				            	</label>&nbsp;&nbsp;
+								<label>
+									<input type="checkbox" id="checkstock">
+									<span style="cursor:pointer">仅显示有货</span>
+								</label>
+							</div>
+						</div>
+
+					</div><!--头部 DIV-->
+					<!--列表部分开始-->
+					<div class="mbshop_pdList">
+						<ul>
+							<li>
+								<a href="#"><img src="" alt="" /></a>
+								<span class='brand'><a href="#">Metersbonwe</a><label>四折</label></span>
+								<span></span>
+								<span></span>
+							</li>
+						</ul>
+					</div><!--列表盒子结束-->
+				</div><!--大盒子右边部分 DIV结束ntainer DIV-->
+			<div class="footer"></div>
+			<div id="toTop"></div>
+			<div id="onlineServer"></div>
+		</div>
+	</body>
+
+</html>

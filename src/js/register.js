@@ -15,7 +15,7 @@ require.config({
 
     }
 });
-require(['jquery','validation','cookie'],function(a,b,c){
+require(['jquery','validation','cookie'],function($,b,c){
     jQuery(function($){
 
 

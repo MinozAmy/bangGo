@@ -1,0 +1,523 @@
+.breadnav {
+    float: none;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1200px;
+    height: auto;
+    padding: 15px 0 5px;
+    clear: both;
+    .bread {
+        float: left;
+        margin: 0 auto;
+        overflow: hidden;
+        height: auto;
+        padding: 5px 0;
+        width: auto;
+        a {
+            color: #000;
+        }
+    }
+}
+.secondSearch {
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    float: left;
+    input[type=text] {
+        width: 100px;
+        height: 20px;
+        float: left;
+        display: block;
+        padding: 2px 5px;
+        font: 13.3333px Arial;
+        margin-left: 10px;
+        border: none;
+    }
+    input[type=button] {
+        width: 20px;
+        height: 20px;
+        margin-top: 3px;
+        float: left;
+        display: block;
+        border: none;
+        cursor: pointer;
+        padding: 1px 6px;
+        background: url(../img/2.fw.png)0 -372px no-repeat;
+    }
+}
+.search_box {
+    width: 180px;
+    height: auto;
+    float: left;
+    margin: 0;
+    padding: 0;
+    display: block;
+    h3 {
+        border-bottom: 1px #000 solid;
+        color: #000;
+        padding-bottom: 10px;
+        font: 700 15px "微软雅黑";
+        width: 180px;
+        height: 32px;
+        float: left;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    ul {
+        width: 180px;
+        height: auto;
+        float: left;
+        margin: 0;
+        padding: 0;
+        display: block;
+        li {
+            width: 180px;
+            height: auto;
+            float: left;
+            margin: 0;
+            padding: 0;
+            display: block;
+            margin-top: 7px;
+            .updown {
+                display: inline-block;
+                cursor: pointer;
+                width: 8px;
+                height: 10px;
+                margin-right: 5px;
+                background: url("../img/2.fw.png") no-repeat -8px -92px;
+            }
+            .rightdown {
+                display: inline-block;
+                cursor: pointer;
+                width: 8px;
+                height: 10px;
+                margin-right: 5px;
+                background: url("../img/2.fw.png") no-repeat 0 -91px;
+            }
+            a {
+                color: #000;
+                line-height: 18px;
+                font-size: 12px;
+                &.under {
+                    text-decoration: underline;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    color: #000;
+                }
+            }
+            dl {
+                clear: left;
+                margin-top: 4px;
+                width: 180px;
+                height: auto;
+                float: left;
+                margin: 0;
+                padding: 0;
+                dt {
+                    width: 180px;
+                    height: auto;
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                    a {
+                        color: #999;
+                        &.under {
+                            text-decoration: underline;
+                            color: #000;
+                        }
+                        &:hover {
+                            text-decoration: underline;
+                            color: #000;
+                        }
+                    }
+                    .more {
+                        margin-left: 13px;
+                        display: inline-block;
+                        cursor: pointer;
+                        width: 8px;
+                        height: 10px;
+                        margin-right: 5px;
+                        background: url("../img/2.fw.png") no-repeat -25px -94px;
+                    }
+                    .less {
+                        margin-left: 13px;
+                        display: inline-block;
+                        cursor: pointer;
+                        width: 8px;
+                        height: 10px;
+                        margin-right: 5px;
+                        background: url("../img/2.fw.png") no-repeat -17px -94px;
+                    }
+                }
+            }
+        }
+    }
+}
+//左边结束
+//右边开始
+.mbshop_search_rt_frame {
+    width: 980px;
+    margin: 0;
+    overflow-x: hidden;
+    height: auto;
+    padding: 0;
+    display: block;
+    float: left;
+    padding-left: 35px;
+}
+//右边上方
+.mbshop_searchOption {
+    height: auto!important;
+    padding-bottom: 10px !important;
+    width: 978px;
+    float: left;
+    display: block;
+    border: 1px solid #ccc;
+    #mainSearch {
+        float: left;
+        .mbshop_searchItem {
+            width: 938px;
+            float: left;
+            margin: 10px 0 0 20px;
+            height: auto;
+            span {
+                width: 50px;
+                float: left;
+                border-right: 1px #ccc solid;
+            }
+            .mbshop_searchItemContent {
+                width: 818px;
+                display: block;
+                height: 21px;
+                margin-right: 18px;
+                float: left;
+                overflow-y: hidden;
+                &.visi {
+                    overflow: visible;
+                    height: auto;
+                }
+                a {
+                    margin: 0 0 10px 20px;
+                    color: #000;
+                    float: left;
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 18px;
+                    i {
+                        font: 400 12px "微软雅黑","黑体","宋体",verdana;
+                        float: left;
+                        text-transform: capitalize;
+                    }
+                }
+                //价格区间
+                .new_mbshop_pricequjian {
+                    display: inline-block;
+                    width: auto;
+                    height: auto;
+                    color: #CCC;
+                    margin-left: 40px;
+                    float: left;
+                    input[type=text] {
+                        display: inline-block;
+                        width: 35px;
+                        height: 13px;
+                        border-color: #CCC;
+                        color: #333;
+                        text-align: center;
+                        float: left;
+                        border: 1px solid #b0b0b0;
+                        padding: 2px 5px;
+                        outline: 0;
+                    }
+                    b {
+                        font-weight: 400;
+                        float: left;
+                        padding: 0 5px;
+                    }
+                    input[type=button] {
+                        width: 45px;
+                        height: 19px;
+                        border: 1px solid #CCC;
+                        color: #000;
+                        background-color: #F5F5F5;
+                        text-align: center;
+                        float: left;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        border-radius: 2px;
+                    }
+                    span {
+                        width: auto;
+                        padding-left: 10px;
+                        border: 0;
+                        color: red;
+                        float: left;
+                    }
+                }
+            }
+            //更多
+            .mbshop_searchMore {
+                display: inline-block;
+                width: 50px;
+                cursor: pointer;
+                float: left;
+                background: url("../img/2.fw.png") no-repeat 33px -253px;
+            }
+        }
+    }
+    .seach_Box {
+        width: 978px;
+        height: 36px;
+        position: relative;
+        float: left;
+        b {
+            float: left;
+            line-height: 18px;
+            font-family: "微软雅黑";
+            margin: 12px 0 0 20px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        .mbshop_searchItemshuxing {
+            width: auto;
+            float: left;
+            margin: 10px 0 0 20px;
+            .mbshop_new_searchItemOption {
+                float: left;
+                display: block;
+                width: auto;
+                height: 30px;
+                .mbshop_new_searchItemOption_menu {
+                    width: 55px;
+                    height: auto;
+                    padding: 2px 25px 2px 10px;
+                    float: left;
+                    display: block;
+                    background: url("../img/2.fw.png") 73px -66px no-repeat #fff;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid #B5B5B5;
+                    border-radius: 3px;
+                    line-height: 18px;
+                    font-family: "微软雅黑","宋体",verdana,"Helvetica Neue",Helvetica,sans-serif;
+                    font-size: 12px;
+                    &.write {
+                        background: #fff;
+                    }
+                    i {
+                        width: 77px!important;
+                        margin-left: -20px;
+                        font-style: normal;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden!important;
+                        float: left;
+                        text-align: center;
+                    }
+                    em {
+                        width: 90px;
+                        height: 10px;
+                        background-color: #fff;
+                        bottom: -9px;
+                        position: absolute;
+                        z-index: 20;
+                        left: 0;
+                        display: none;
+                    }
+                }
+                .mbshop_new_searchItemOption_box {
+                    display: none;
+                    position: absolute;
+                    width: 980px;
+                    height: auto;
+                    padding: 5px 10px 10px;
+                    border: 1px solid #B5B5B5;
+                    background-color: #fff;
+                    z-index: 5;
+                    top: 34px;
+                    left: -1px;
+                    webkit-box-shadow: 0 0 5px #ccc;
+                    -moz-box-shadow: 0 0 5px #ccc;
+                    box-shadow: 0 0 5px #ccc;
+                    border-top: 0;
+                    box-sizing: border-box;
+                    a {
+                        float: left;
+                        display: block;
+                        width: 90px;
+                        margin-top: 5px;
+                        padding: 3px 0;
+                        text-align: center;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        color: #000;
+                        &:hover {
+                            background: #DCDCDC;
+                        }
+                        b {
+                            width: 10px;
+                            height: 10px;
+                            display: inline-block;
+                            border: 1px solid #ccc;
+                            margin-top: 4px;
+                            margin-right: 5px;
+                            vertical-align: middle;
+                            &.newbgcolorblock_11 {
+                                background-color: #0068b7;
+                            }
+                            &.newbgcolorblock_13 {
+                                background-color: #000;
+                            }
+                            &.newbgcolorblock_3 {
+                                background-color: #b25d25;
+                            }
+                            &.newbgcolorblock_5 {
+                                background-color: grey;
+                            }
+                            &.newbgcolorblock_6 {
+                                background-color: #fff;
+                            }
+                            &.newbgcolorblock_10 {
+                                background-color: #22ac38;
+                            }
+                            &.newbgcolorblock_9 {
+                                background-color: #22ac38;
+                            }
+                            &.newbgcolorblock_12 {
+                                background-color: #fff143;
+                            }
+                            &.newbgcolorblock_1 {
+                                background-color: #f2ecde;
+                            }
+                            &.newbgcolorblock_2 {
+                                background-color: #f2ecde;
+                            }
+                            &.newbgcolorblock_4 {
+                                background-color: #fa8c35;
+                            }
+                            &.newbgcolorblock_7 {
+                                background-color: #8d4bbb;
+                            }
+                            &.newbgcolorblock_8 {
+                                background-color: pink;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//列表页内容开始
+//商品信息
+.mbshop_searchAlert {
+    padding-top: 15px !important;
+    width: 980px;
+    height: 14px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    font: 400 12px "微软雅黑","黑体","宋体",verdana;
+    b {
+        font-weight: 700;
+        color: red;
+    }
+}
+//头部
+.mbshop_pdFilter {
+    width: 980px;
+    float: none;
+    margin: 15px auto 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    .mbshop_pdFilterItem {
+        float: left;
+        line-height: 18px;
+        .mbshop_pdFilterHover {
+            background-color: #F8584F;
+            color: #fff;
+        }
+        a {
+            width: auto;
+            height: auto;
+            float: left;
+            display: block;
+            border-right: 2px #fff solid;
+            margin: 0;
+            padding: 10px 25px;
+            color: #000;
+            &:hover {
+                background-color: #FF7A72;
+                color: #fff;
+            }
+        }
+        .mbshop_pdFilterUp1 {
+            background-position: 83px -100px;
+            background-image: url("../img/2.fw.png");
+            background-repeat: no-repeat;
+        }
+        .mbshop_pdFilterUp2 {
+            background-position: 61px -100px;
+            background-image: url("../img/2.fw.png");
+            background-repeat: no-repeat;
+        }
+        .mbshop_pdFilterDown1 {
+            background-position: 83px -141px;
+            background-image: url("../img/2.fw.png");
+            background-repeat: no-repeat;
+        }
+        .mbshop_pdFilterDown2 {
+            background-position: 61px -141px;
+            background-image: url("../img/2.fw.png");
+            background-repeat: no-repeat;
+        }
+    }
+    .mbshop_pdPaginationTop {
+        float: right;
+        width: auto;
+        padding-top: 10px;
+        padding-right: 10px;
+        .mbshop_pdPaginationAct {
+            float: left;
+            width: auto;
+            padding: 1px 15px 0;
+            line-height: 18px;
+            
+        }
+        .mbshop_pdPaginationShowPd {
+                width: auto;
+                float: left;
+                line-height: 18px;
+                input[type=radio], input[type=checkbox] {
+                    vertical-align: middle;
+                    margin: 3px 3px 0px 5px;
+                }
+        }
+    }
+}
+
+//列表
+.mbshop_pdList {
+    width: 980px;
+    overflow-x: hidden;
+    float: none;
+    margin: 0 auto;
+    overflow: hidden;
+    li{
+        width: 230px;
+        height: auto;
+        float: left;
+        display: block;
+        margin-top: 15px;
+        margin-right: 18px;
+        position: relative;
+    }
+}
