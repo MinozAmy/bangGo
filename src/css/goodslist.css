@@ -155,4 +155,42 @@
 
 .mbshop_pdList { width: 980px; overflow-x: hidden; float: none; margin: 0 auto; overflow: hidden; }
 
-.mbshop_pdList li { width: 230px; height: auto; float: left; display: block; margin-top: 15px; margin-right: 18px; position: relative; }
+.mbshop_pdList ul .listLi { width: 230px; height: auto; float: left; display: block; margin-top: 15px; margin-right: 18px; position: relative; }
+
+.mbshop_pdList ul .listLi .listBigImg { display: block; position: relative; float: left; margin-bottom: 5px; width: 230px; }
+
+.mbshop_pdList ul .listLi .listBigImg img { width: 230px; height: 315px; }
+
+.mbshop_pdList ul .listLi .brand { overflow: hidden; width: 230px; height: 20px; font: 400 14px "微软雅黑","黑体","宋体",verdana; text-transform: uppercase; }
+
+.mbshop_pdList ul .listLi .brand a { display: inline-block; width: 180px; height: 14px; line-height: 14px; overflow-y: hidden; text-align: left; text-transform: uppercase; color: #000; }
+
+.mbshop_pdList ul .listLi .brand label { float: right; width: 40px; height: 18px; line-height: 18px; border: 1px solid #f8584f; text-align: center; color: #f8584f; background: #fdedec; }
+
+.mbshop_pdList ul .listLi .produceName { width: 230px; height: 20px; overflow: hidden; font: 400 14px "微软雅黑","黑体","宋体",verdana; text-transform: uppercase; }
+
+.mbshop_pdList ul .listLi .produceName a { color: #000; }
+
+.mbshop_pdList ul .listLi .producePrice { width: 230px; height: 20px; overflow: hidden; float: left; display: block; font: 400 14px "微软雅黑","黑体","宋体",verdana; text-transform: uppercase; }
+
+.mbshop_pdList ul .listLi .producePrice b { font: 700 14px "微软雅黑","黑体","宋体",verdana; }
+
+.mbshop_pdList ul .listLi .producePrice i { margin-left: 10px; font: 400 14px "微软雅黑","黑体","宋体",verdana; text-decoration: line-through; }
+
+.mbshop_pdList ul .listLi .listSmallImg { width: 230px; margin-top: 8px; }
+
+.mbshop_pdList ul .listLi .listSmallImg .shortWidth { width: 190px; height: 33px; float: left; overflow: hidden; position: relative; }
+
+.mbshop_pdList ul .listLi .listSmallImg .btnLeft { margin-right: 7px; width: 15px; float: left; height: 33px; cursor: pointer; background: url(../img/2.fw.png) no-repeat 2px -284px; }
+
+.mbshop_pdList ul .listLi .listSmallImg .btnRight { margin-left: 3px; width: 15px; float: left; height: 33px; cursor: pointer; background: url(../img/2.fw.png) no-repeat -16px -284px; }
+
+.mbshop_pdList ul .listLi .listSmallImg .btn_disable { opacity: .2; }
+
+.mbshop_pdList ul .listLi .listSmallImg ol { width: 1000px; position: absolute; }
+
+.mbshop_pdList ul .listLi .listSmallImg ol li { width: 31px; height: 31px; float: left; display: block; margin-right: 5px; border: 1px solid #ccc; }
+
+.mbshop_pdList ul .listLi .listSmallImg ol li img { width: 31px; height: 31px; }
+
+.mbshop_pdList ul .listLi .listSmallImg ol li:hover { border: 1px solid red; }

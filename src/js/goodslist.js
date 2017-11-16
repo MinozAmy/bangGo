@@ -53,5 +53,10 @@ require(['jquery','headfoot'],function(a){
     	$('.mbshop_pdFilterItem').find('.mbshop_pdFilterUp2').on('click',function(){
     		$(this).toggleClass('mbshop_pdFilterDown2');
     	})
+    	//列表
+    	$('.listSmallImg').find('.btnLeft,.btnRight').hide();
+    	if($('.shortWidth li').length >= 5){
+    		$('.listSmallImg').find('.btnLeft,.btnRight').show();
+    	}
 })
 })
