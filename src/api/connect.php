@@ -15,6 +15,6 @@
 	}
 	
 	//设置编码
-	$conn->set_chatset(utf-8);
+	$conn->set_charset('utf8');
 	
 ?>
