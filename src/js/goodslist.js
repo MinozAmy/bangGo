@@ -61,32 +61,163 @@ require(['jquery','headfoot'],function(a){
 		var pageNo = 1;
 
 		// 每页显示数量
-		var qty = 4;
-
+		var qty = 8;
+		
+		//页面总数
 		var pageLen;
+		
+		var discount ='';
+		var listPrice = '';
+		var datetime = '';
+		//初始化
+		$('.firstPage,.beforePage').hide();
 		
 		//页码点击操作
 		$('.mbshop_container').on('click','.page a',function(){
+			
+			//清楚默认数据
 			$('.mbshop_pdList').html('');
+			
+			//根据页数获取不同内容
 			if($(this).html()=='首页'){
 				pageNo = 1;
-				$(this).hide();
 			}else if ($(this).html()=='尾页'){
 				pageNo = pageLen;
-				$(this).hide();
 			}else if($(this).html()=='上一页'){
-				pageNo--;
-				$('.mbshop_container .pageNos').each(function(idx,ele){
-					console.log(ele);
-					var i = $(ele).html();
-					$(ele).html(i--);
-				});
+				pageNo = parseInt(pageNo) - 1;
 			}else if($(this).html()=='下一页'){
-				pageNo++;
+				pageNo = parseInt(pageNo) + 1;
 			}else{
 				pageNo = $(this).html();
 			}
-			$(this).addClass('currentPage').siblings().removeClass('currentPage');
+			
+			//当前页居中，高亮显示当前页
+			$('.mbshop_container .pageNos').each(function(idx,ele){
+				//居中
+				if(pageNo>7 && (pageNo<pageLen-2)){
+					$('.mbshop_container .pageNos').eq(idx).html(parseInt(pageNo)+idx-3);
+				}else if(pageNo>3 && pageNo <= 7){
+					$('.mbshop_container .pageNos').eq(idx).html(idx+1);
+				}
+				console.log(idx,pageNo);
+				//高亮
+				if($(ele).html() == pageNo){
+					$(ele).addClass('currentPage').siblings('.pageNos').removeClass('currentPage');
+				}
+			});
+			
+			//页数隐藏显示切换
+			if(pageNo == 1){
+				$('.firstPage,.beforePage').hide();
+			}else if(pageNo == pageLen){
+				$('.nextPage,.lastPage').hide();
+			}else{
+				$('.page a').show();
+			}
+			//请求数据
+			$.ajax({
+    			type:"get",
+    			url:"../api/goodslist.php",
+    			async:true,
+    			data:{qty:qty,pageNo:pageNo,discount:discount,price:listPrice,datetime:datetime},
+   				success: function(data){
+   					ajaxData(data);
+   				},
+   				error:function(e){
+   					console.log(e)
+   				}
+    		
+    		});
+		})
+		
+		//头部排序操作
+		//折扣
+		
+		$('.mbshop_pdFilterItem').on('click','#listDiscount',function(){
+			if(listPrice){listPrice='';}
+			if(datetime){datetime ='';}
+			if($(this).hasClass('desc')){
+				discount = 'asc';
+				$(this).addClass('asc').removeClass('desc');
+			}else{
+				$(this).addClass('desc').removeClass('asc');
+				discount = 'desc';
+			}
+    		//清楚默认数据
+			$('.mbshop_pdList').html('');
+			//请求数据
+			$.ajax({
+    			type:"get",
+    			url:"../api/goodslist.php",
+    			async:true,
+    			data:{qty:qty,pageNo:pageNo,discount:discount},
+   				success: function(data){
+   					ajaxData(data);
+   				},
+   				error:function(e){
+   					console.log(e)
+   				}
+    		
+    		});
+		//价格
+		
+    	}).on('click','#listPrice',function(){
+    		if(discount){discount='';}
+    		if(datetime){datetime ='';}
+			if($(this).hasClass('desc')){
+				listPrice = 'asc';
+				$(this).addClass('asc').removeClass('desc');
+			}else{
+				$(this).addClass('desc').removeClass('asc');
+				
+				listPrice = 'desc';
+			}
+    		//清楚默认数据
+			$('.mbshop_pdList').html('');
+			//请求数据
+			$.ajax({
+    			type:"get",
+    			url:"../api/goodslist.php",
+    			async:true,
+    			data:{qty:qty,pageNo:pageNo,price:listPrice},
+   				success: function(data){
+   					ajaxData(data);
+   				},
+   				error:function(e){
+   					console.log(e)
+   				}
+   			})
+    		//上架时间
+    	}).on('click','#datetime',function(){
+    			if(discount){discount='';}
+    			if(listPrice){listPrice='';}
+			if($(this).hasClass('mbshop_pdFilterDown1')){
+				datetime = 'asc';
+			}else{
+				datetime = 'desc';
+			}
+    		//清除默认数据
+			$('.mbshop_pdList').html('');
+			//请求数据
+			$.ajax({
+    			type:"get",
+    			url:"../api/goodslist.php",
+    			async:true,
+    			data:{qty:qty,pageNo:pageNo,datetime:datetime},
+   				success: function(data){
+   					ajaxData(data);
+   				},
+   				error:function(e){
+   					console.log(e)
+   				}
+    		})
+    	}).on('click','#moren',function(){
+    		if(discount){discount='';}
+    		if(listPrice){listPrice='';}
+    		if(datetime){datetime = '';}
+    		//清楚默认数据
+			$('.mbshop_pdList').html('');
+			//请求数据
 			$.ajax({
     			type:"get",
     			url:"../api/goodslist.php",
@@ -98,14 +229,15 @@ require(['jquery','headfoot'],function(a){
    				error:function(e){
    					console.log(e)
    				}
-    		
-    		});
-		})
+    		})
+    	})
+		
 		//获取内容
     	$.ajax({
     		type:"post",
     		url:"../api/goodslist.php",
     		async:true,
+    		data:{qty:qty,pageNo:pageNo},
    			success: function(data){
    				ajaxData(data);
     			
@@ -117,12 +249,12 @@ require(['jquery','headfoot'],function(a){
     	});
     	
     	
-    	
+    	//数据处理函数
     	function ajaxData(data){
     		var data = JSON.parse(data);
      		
      			var ul = $('<ul>');
-					ul.html( data.data.map(item=>{
+					ul.html(data.data.map(item=>{
 					return `
 					<li class="listLi" data-id="${item.id}">
 						<a href="#" class="listBigImg"><img src="../${item.url}" alt="" /></a>
@@ -170,7 +302,7 @@ require(['jquery','headfoot'],function(a){
     			//左按钮
     			$('.listSmallImg').on('click','.btnLeft',function(){
     				var smallPage = parseInt((($(this).siblings('.shortWidth').find('ol li').length)/5));
-    				console.log(index);
+//  				console.log(index);
     				if(index <= 0){
 						$(this).addClass('btn_disable');
 						return false;

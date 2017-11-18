@@ -4,21 +4,29 @@
 	
 	//传入数据
 	$pageNo = isset($_GET['pageNo']) ? $_GET['pageNo'] : 1;
-	$qty = isset($_GET['qty']) ? $_GET['qty'] : 12;
+	$qty = isset($_REQUEST['qty']) ? $_REQUEST['qty'] : 12;
     $brand = isset($_GET['brand']) ? $_GET['brand'] : '';
     $name = isset($_GET['name']) ? $_GET['name'] : '';
-    $discout = isset($_GET['discout']) ? $_GET['discout'] : '';
+    $discount = isset($_GET['discount']) ? $_GET['discount'] : '';
     $originprice = isset($_GET['originprice']) ? $_GET['originprice'] : '';
     $price = isset($_GET['price']) ? $_GET['price'] : '';
 	$url = isset($_GET['url']) ? $_GET['url'] : '';
+	$datetime = isset($_GET['datetime']) ? $_GET['datetime'] : '';
 	
 	//编写sql语句
 	$sql = 'select * from goodslist';
+	
 	
     if($name){
         $sql .= ' where category="' . $name . '"';
     }if($url){
         $sql .= ' where category="' . $url. '"';
+    }if($discount){
+    	$sql = ' select * from goodslist order by discount '.$discount;
+    }if($price){
+    	$sql = 'select * from goodslist order by price '.$price;
+    }if($datetime){
+    	$sql = 'select * from goodslist order by datetime '.$datetime;
     }
 	$sql .= ' limit '. $qty*($pageNo-1) . ',' . $qty;
 	//获取查询结果集
